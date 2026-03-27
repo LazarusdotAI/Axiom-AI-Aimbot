@@ -1,0 +1,29 @@
+# ─── Core runtime dependencies ───
+numpy
+opencv-python
+onnxruntime-directml        # ONNX inference with DirectML (GPU) on Windows
+mss                         # Cross-platform screen capture fallback
+dxcam; platform_system == "Windows"   # Fast Windows screen capture via Desktop Duplication API
+comtypes; platform_system == "Windows"  # Required by dxcam
+
+# ─── UI ───
+PyQt6
+PyQt6-Fluent-Widgets        # imports as: qfluentwidgets
+PyQt6-Frameless-Window       # imports as: qframelesswindow
+
+# ─── Windows / device integrations ───
+pywin32                      # win32api, win32con, win32gui, pywintypes, etc.
+pyserial                     # imports as: serial (Arduino / MAKCU COM port)
+vgamepad                     # Virtual Xbox controller for mouse movement
+
+# ─── Roboflow model integration (download + hosted inference) ───
+roboflow
+
+# ─── Model training (optional — only needed to train new game models) ───
+ultralytics                  # YOLOv8 training & export
+icrawler                     # Image scraping from Bing/Google for dataset building
+onnx                         # ONNX model manipulation
+onnxslim>=0.1.71             # ONNX model simplification during export
+
+# ─── Test dependencies ───
+pytest
